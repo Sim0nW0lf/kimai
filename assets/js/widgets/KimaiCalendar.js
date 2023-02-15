@@ -541,6 +541,7 @@ export default class KimaiCalendar {
         title = title.replace('{customer}', apiItem.project.customer.name);
         title = title.replace('{description}', apiItem.description ?? '');
         title = title.replace('{activity}', apiItem.activity.name ?? '');
+        title = title.replace('{duration}', DATES.formatDuration(apiItem.duration));
 
         if (title === '' || title === null) {
             title = apiItem.activity.name;
